@@ -1,0 +1,55 @@
+:root {
+  --main-green: #9ed821;
+  --black: #262c20;
+  --hamburger: #292d32;
+  --hamburger-open: var(--hamburger);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media screen and (min-width: 360px) {
+    width: 360 px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+  }
+
+  @media screen and (min-width: 1366px) {
+    width: 1366px;
+    /* padding-left: 26px;
+    padding-right: 26px; */
+  }
+}

@@ -1,0 +1,27 @@
+@import url(./partial/hamburger.css);
+
+.header {
+  height: 50px;
+  background: var(--main-green);
+  display: flex;
+  justify-content: center;
+}
+.header__logo-link {
+  border-radius: 0px 0px 8px 8px;
+  border: 4px solid var(--black);
+  border-top: 0px;
+  background: var(--main-green);
+  height: 61px;
+  padding: 20px 28px;
+}
+.header__link-icon {
+  display: inline-block;
+  width: 170px;
+  height: 21.5px;
+}
+.hamburger {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  top: 12px;
+}
