@@ -3,6 +3,9 @@
   --black: #262c20;
   --hamburger: #292d32;
   --hamburger-open: var(--hamburger);
+  --white: #fff;
+  --libre: Libre Caslon Text;
+  --belota: Bellota Text;
 }
 
 h1,
@@ -21,9 +24,6 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-}
-
-.list {
   list-style: none;
   padding: 0;
   margin: 0;
