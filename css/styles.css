@@ -29,17 +29,19 @@ ol {
 a {
   text-decoration: none;
 }
-img {
-  max-width: 100%;
-  display: block;
-}
+
 address {
   font-style: normal;
+}
+button {
+  cursor: pointer;
 }
 
 .container {
   margin: 0 auto;
-  padding: 0 16px;
+  /* padding: 0 16px; */
+  padding-left: 16px;
+  padding-right: 16px;
   width: 360px;
 
   @media screen and (min-width: 768px) {
