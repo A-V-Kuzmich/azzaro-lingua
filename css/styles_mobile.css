@@ -37,8 +37,8 @@
 .hero__h1 {
   color: var(--black, #262c20);
 
-  text-shadow: 1.9923591613769531px 1.593887448310852px 0px 0px #f2f6e6;
-  font-size: 61.143px;
+  text-shadow: 2px 2px 0px #f2f6e6;
+  font-size: 61px;
   font-family: Libre Caslon Text;
   font-weight: 700;
   line-height: 120%;
@@ -55,7 +55,7 @@
   font-size: 45px;
   font-family: Bellota Text;
   font-weight: 700;
-  line-height: 1.48;
+  margin-top: 30px;
   margin-bottom: 16px;
 }
 .hero__info {
@@ -125,6 +125,7 @@
 .program {
   background: var(--main-green);
   padding-top: 31px;
+  padding-bottom: 77px;
   /* position: relative; */
   overflow: hidden;
 
@@ -151,7 +152,8 @@
 }
 .program__h2,
 .description__h2,
-.customers__h2 {
+.customers__h2,
+.services__h2 {
   color: var(--black);
   font-size: 20px;
   font-family: var(--libre);
@@ -183,6 +185,13 @@
   background: var(--light, #f2f6e6);
   box-shadow: 4px 4px 0px 0px #262c20;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: url('../images/elements/frame-97.svg');
+    display: block;
+    margin-right: 14px;
+  }
 }
 .description {
   padding-top: 95px;
@@ -193,7 +202,7 @@
   text-transform: uppercase;
   position: relative;
   &::before {
-    content: url('../images/elements/star-hallo.svg');
+    content: url('../images/elements/star-hallo.png');
     display: inline-block;
     width: 121px;
     height: 121px;
@@ -473,7 +482,7 @@
   }
 }
 .footer__hosting {
-  margin-bottom: 28px;
+  margin-bottom: 52px;
 }
 .hosting__h2 {
   color: var(--white);
@@ -499,6 +508,13 @@
     border-bottom: 1px solid #fff;
     opacity: 0.4000000059604645;
   }
+  &::before {
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    opacity: 0.4000000059604645;
+    margin-bottom: 52px;
+  }
 }
 .creator__info {
   display: flex;
@@ -510,7 +526,7 @@
   font-size: 16px;
   font-family: var(--libre);
   font-weight: 700;
-  line-height: 1.32;
+  line-height: 1.72;
   align-self: stretch;
   width: 150px;
 }
@@ -537,10 +553,11 @@
   margin-bottom: 28px;
 }
 .footer__copy {
-  color: var(--white, #fff);
+  color: var(--white);
   font-size: 16px;
-  font-family: Bellota Text;
+  font-family: var(--belota);
   font-weight: 700;
+  text-align: center;
+  display: block;
   opacity: 0.699999988079071;
-  margin-top: 28px;
 }
