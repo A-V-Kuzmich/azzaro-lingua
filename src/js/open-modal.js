@@ -1,11 +1,14 @@
-(() => {
-  const refs = {
-    hamburger: document.querySelector('[hamburger]'),
-  };
+import { refs } from "./refs";
 
-  refs.hamburger.addEventListener('click', toggleModalMobile);
+const { hamburger, body, backdrop } = refs;
+
+(() => {
+  hamburger.addEventListener('click', toggleModalMobile);
 
   function toggleModalMobile() {
-    refs.hamburger.classList.toggle('burger-active');
+    hamburger.classList.toggle('burger-active');
+    body.classList.toggle('no-scroll');
+    backdrop.classList.toggle('backdrop');
+    // backdrop.classList.remove('visually-hidden');
   }
 })();
