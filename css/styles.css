@@ -9,6 +9,9 @@
   --light: #f2f6e6;
   --orangen: #ffc01d;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 h1,
 h2,
