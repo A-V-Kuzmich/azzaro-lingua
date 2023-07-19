@@ -1,0 +1,31 @@
+{
+  "name": "azzaro-lingua",
+  "version": "1.1.0",
+  "description": "",
+  "homepage": "https://A-V-Kuzmich.github.io/azzaro-lingua",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /azzaro-lingua/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-V-Kuzmich/azzaro-lingua.git"
+  },
+  "keywords": [],
+  "author": "Andrii Kuzmichov <a.v.kuzmi4@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "cssnano": "^6.0.1",
+    "parcel": "^2.9.3",
+    "parcel-bundler": "^1.3.1",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.7.2",
+    "sass": "^1.43.8"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}

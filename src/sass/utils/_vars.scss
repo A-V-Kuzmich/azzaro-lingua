@@ -1,0 +1,43 @@
+:root {
+  --main-green: #9ed821;
+  --black: #262c20;
+  --hamburger: #292d32;
+  --hamburger-open: var(--hamburger);
+  --white: #fff;
+  --libre: Libre Caslon Text;
+  --belota: Bellota Text;
+  --light: #f2f6e6;
+  --orangen: #ffc01d;
+}
+
+//colors
+$main-green: #9ed821;
+$black: #262c20;
+$hamburger: #292d32;
+$hamburger-open: $hamburger;
+$white: #fff;
+$light: #f2f6e6;
+$orangen: #ffc01d;
+
+//shadows
+$cards-shadows-box: 8px -6px 16px -2px;
+$btn-shadow-color: rgba(255, 107, 1, 0.6);
+$filters-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+$cards-shadow-color: rgba(73, 73, 73, 0.95);
+
+//font
+$libre: Libre Caslon Text;
+$belota: Bellota Text;
+
+//breakpoints
+// $mobile: 320px;
+$mobile: 360px;
+// $tablet: 768px;
+$tablet: 360px;
+// $desktop: 1024px;
+$desktop: 1366px;
+
+//transition
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-duration: 250ms;
+
