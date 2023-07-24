@@ -13,10 +13,10 @@
   align-items: center;
 }
 .header__logo-modal-container {
-    background-color: $main-green;
+  background-color: $main-green;
   height: 50px;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .header__logo-modal-link {
   background-color: $main-green;
@@ -26,55 +26,66 @@ justify-content: center;
   background: $main-green;
   padding: 24px 20px;
   display: flex;
-justify-content: center;
+  justify-content: center;
   align-items: center;
   width: 210px;
 }
 .header__logo-img-modal {
   width: 170px;
-    height: 21.5px;
+  height: 21.5px;
 }
 .header__mobile-nav {
   padding-top: 41px;
   padding-bottom: 41px;
 }
-.mobile__nav-item{
+.mobile__nav-item {
   display: flex;
   justify-content: center;
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 36px;
   }
 }
 .mobile__nav-link {
   color: $black;
-    font-family: $bellota ;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  font-family: $bellota;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.header__mobile-lang{
+.header__mobile-lang {
   background-color: $main-green;
   height: 71px;
-  box-shadow: 0px 4px 0px 0px #262C20;
+  box-shadow: 0px 4px 0px 0px #262c20;
 }
 .header__mobile-contact {
   margin-top: 46px;
   margin-bottom: 50px;
-
 }
 
 .header__mobile-contact-link {
   display: block;
   margin-left: 50px;
-  
-  color: var(--black, #262C20);
-    font-family: Bellota Text;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    &:not(:last-child) {
-        margin-bottom: 36px;
-      }
+
+  color: $black;
+  font-family: Bellota Text;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+  &::before {
+    position: relative;
+    bottom: -9px;
+    margin-right: 8px;
+  }
+  &:first-child::before {
+    content: url('../images/elements/phone.svg');
+  }
+
+  &:last-child::before {
+    content: url('../images/elements/mail.svg');
+  }
 }
