@@ -5,10 +5,6 @@
   padding-right: 16px;
   width: 360px;
 
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
-
   @media screen and (min-width: $tablet) {
     width: $mobile;
     // width: $tablet;
