@@ -1,0 +1,51 @@
+<div id="modal-form" class="modal__form-backdrop">
+  <div class="form__container">
+    <button type="button" class="form__btn-close">
+      <span class="material-symbols-outlined"> close </span>
+    </button>
+    <div class="form__body">
+      <h2 class="form__h2">Sprachunterricht</h2>
+      <p class="form__text">
+        Hier können Sie Ihre Anfrage oder Anregung schildern und uns mit nachfolgendem Formular
+        zusenden.Sie erhalten von uns kurzfristig und kostenfrei eine Rückantwort per E-Post.
+      </p>
+      <form action="" autocomplete="on" class="form">
+        <fieldset class="form__field">
+          <legend>Andere * -</legend>
+          <label>
+            Herr
+            <input type="radio" name="gender" value="male" />
+          </label>
+          <label>
+            Frau
+            <input type="radio" name="gender" value="female" />
+          </label>
+        </fieldset>
+        <label class="form__field">
+          Vorname *
+          <input class="form__input" type="text" name="firstName" />
+        </label>
+        <label class="form__field">
+          Nachname *
+          <input class="form__input" type="text" name="lastName" />
+        </label>
+        <label class="form__field"
+          >Internet *<input class="form__input" type="text" name="link"
+        /></label>
+        <label class="form__field"
+          >E-Post *<input class="form__input" type="email" name="email"
+        /></label>
+        <label class="form__field"
+          >Betreff *<input class="form__input" type="text" name="theme"
+        /></label>
+        <label class="form__field"
+          >Nachricht *<textarea class="form__input" type="text" name="message"></textarea>
+        </label>
+        <label>
+          <input type="checkbox" /> Ich wünsche eine Kopie meiner Anfrage an mein Postfach.
+        </label>
+        <button type="submit">Zurücksetzen</button>
+      </form>
+    </div>
+  </div>
+</div>

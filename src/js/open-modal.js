@@ -1,6 +1,6 @@
 import { refs } from "./refs";
 
-const { hamburger, body, backdrop } = refs;
+const { hamburger, body, modalNav } = refs;
 
 (() => {
   hamburger.addEventListener('click', toggleModalMobile);
@@ -8,7 +8,7 @@ const { hamburger, body, backdrop } = refs;
   function toggleModalMobile() {
     hamburger.classList.toggle('burger-active');
     body.classList.toggle('no-scroll');
-    backdrop.classList.toggle('backdrop');
-    backdrop.classList.toggle('visually-hidden');
+    modalNav.classList.toggle('backdrop');
+    modalNav.classList.toggle('visually-hidden');
   }
 })();
