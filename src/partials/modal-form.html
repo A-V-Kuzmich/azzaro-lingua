@@ -10,17 +10,17 @@
         zusenden.Sie erhalten von uns kurzfristig und kostenfrei eine Rückantwort per E-Post.
       </p>
       <form action="" autocomplete="on" class="form">
-        <fieldset class="form__field">
+        <div role="group" class="form__field">
           <legend>Andere * -</legend>
           <label>
             Herr
-            <input type="radio" name="gender" value="male" />
+            <input class="form__radio" type="radio" name="gender" value="male" />
           </label>
           <label>
             Frau
-            <input type="radio" name="gender" value="female" />
+            <input class="form__radio" type="radio" name="gender" value="female" />
           </label>
-        </fieldset>
+        </div>
         <label class="form__field">
           Vorname *
           <input class="form__input" type="text" name="firstName" />
@@ -42,9 +42,9 @@
           >Nachricht *<textarea class="form__input" type="text" name="message"></textarea>
         </label>
         <label>
-          <input type="checkbox" /> Ich wünsche eine Kopie meiner Anfrage an mein Postfach.
+          <input class="" type="checkbox" /> Ich wünsche eine Kopie meiner Anfrage an mein Postfach.
         </label>
-        <button type="submit">Zurücksetzen</button>
+        <button class="form__submit-btn" type="submit">Zurücksetzen</button>
       </form>
     </div>
   </div>
