@@ -61,6 +61,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  &-container {
+    @extend .form__field;
+    display: flex;
+  }
 }
 .form__input {
   width: 100%;
