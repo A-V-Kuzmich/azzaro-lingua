@@ -1,0 +1,24 @@
+{
+  "mappings": "AEAC,CAAA,KACC,IAAM,EAAO,CACX,UAAW,SAAS,aAAA,CAAc,cACpC,EAEA,EAAK,SAAA,CAAU,gBAAA,CAAiB,QAEhC,WACE,EAAK,SAAA,CAAU,SAAA,CAAU,MAAA,CAAO,gBAClC,EACF,CAAA",
+  "sources": [
+    "<anon>",
+    "src/index.js",
+    "src/js/open-modal.js"
+  ],
+  "sourcesContent": [
+    "(()=>{\n    const refs = {\n        hamburger: document.querySelector(\"[hamburger]\")\n    };\n    refs.hamburger.addEventListener(\"click\", toggleModalMobile);\n    function toggleModalMobile() {\n        refs.hamburger.classList.toggle(\"burger-active\");\n    }\n})();\n\n\n\n\n//# sourceMappingURL=index.63dfa6d6.js.map\n",
+    "import './js/open-modal';",
+    "(() => {\r\n  const refs = {\r\n    hamburger: document.querySelector('[hamburger]'),\r\n  };\r\n\r\n  refs.hamburger.addEventListener('click', toggleModalMobile);\r\n\r\n  function toggleModalMobile() {\r\n    refs.hamburger.classList.toggle('burger-active');\r\n  }\r\n})();\r\n"
+  ],
+  "names": [
+    "refs",
+    "hamburger",
+    "document",
+    "querySelector",
+    "addEventListener",
+    "classList",
+    "toggle"
+  ],
+  "version": 3,
+  "file": "index.63dfa6d6.js.map"
+}
