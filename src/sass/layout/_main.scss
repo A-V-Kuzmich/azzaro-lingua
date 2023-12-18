@@ -452,7 +452,7 @@
   background-color: var(--white);
   padding-top: 80px;
   padding-bottom: 80px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .customers__h2 {
@@ -475,46 +475,59 @@
   line-height: 1.22;
   margin-bottom: 28px;
 }
-// .customers {
-//   &__list {
-//     display: flex;
-//     body::-webkit-scrollbar {
-//       width: 0.5em;
-//     }
-//   }
-//   &__item {
-//     width: 120px;
-//     height: 95px;
-//     border-radius: 5.854px;
-//     border: 1.463px solid var(--Black, #262c20);
-//     background: var(--Light, #f2f6e6);
-//     box-shadow: 2.927px 2.927px 0px 0px #262c20;
-//     position: relative;
+.customers {
+  &__list {
+    display: flex;
+    padding-bottom: 2px;
+    overflow-x: auto;
+  }
+  &__item {
+    min-width: 120px;
+    height: 95px;
+    border-radius: 5.854px;
+    border: 1.463px solid var(--Black, #262c20);
+    background: var(--Light, #f2f6e6);
+    box-shadow: 2.927px 2.927px 0px 0px #262c20;
+    position: relative;
 
-//     &:not(:last-child) {
-//       margin-right: 12px;
-//     }
-//   }
-// }
-// .customers {
-//   &__img-container {
-//     padding: 18px;
-//     position: relative;
-//     // &::after {
-//     //   content: url('../images/elements/group_41.svg');
-//     //   display: block;
-//     //   position: absolute;
-//     //   width: 15px;
-//     //   height: 15px;
-//     //   right: 2%;
-//     //   bottom: 5%;
-//     // }
-//   }
-//   &__img {
-//     object-fit: contain;
-//     width: 100%;
-//   }
-// }
+    margin-right: 12px;
+  }
+}
+.customers {
+  &__img-container {
+    padding: 18px;
+    min-width: 100%;
+    //     position: relative;
+    //     // &::after {
+    //     //   content: url('../images/elements/group_41.svg');
+    //     //   display: block;
+    //     //   position: absolute;
+    //     //   width: 15px;
+    //     //   height: 15px;
+    //     //   right: 2%;
+    //     //   bottom: 5%;
+    //     // }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.customers__btn {
+  &-svg {
+    width: 77px;
+    height: 77px;
+    fill: var(--Light, #f2f6e6);
+    &:hover {
+      fill: var(--Main-Green, #9ed821);
+    }
+    &:active {
+      fill: var(--Orangen, #ffc01d);
+    }
+  }
+}
+
 // .customers__info {
 //   &-text {
 //     display: flex;
