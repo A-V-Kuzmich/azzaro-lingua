@@ -128,8 +128,12 @@
   z-index: 1;
 }
 
-.footer__btn-up-img {
+.footer__btn-up-svg {
   width: 65px;
+  fill: #262c20;
+  &:hover {
+    fill: #fff;
+  }
 }
 
 .creator {

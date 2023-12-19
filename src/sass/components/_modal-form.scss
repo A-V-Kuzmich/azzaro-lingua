@@ -1,81 +1,69 @@
-.form__container {
-  width: 340px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px 20px;
-  border-radius: 18px;
-  border: 2px solid $black;
-  background: $light;
-  box-shadow: 4px 4px 0px 0px #262c20;
-}
-.form__btn-close {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: $black;
-  z-index: 102;
-  & > span {
+.modal-form {
+  &__container-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+  }
+  &__container {
+    width: 340px;
+    position: relative;
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 20px;
+    border-radius: 18px;
+    border: 2px solid $black;
+    background: $light;
+    box-shadow: 4px 4px 0px 0px #262c20;
+  }
+
+  &__btn-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $black;
+    z-index: 102;
+  }
+  &__btn-close-svg {
     width: 20px;
     height: 20px;
-    color: #f2f6e6;
+    fill: #f2f6e6;
   }
 }
-.form__body {
+.modal-form__body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.form__h2 {
-  color: $black;
-  text-align: center;
-  font-family: $libre;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.75;
-  text-transform: uppercase;
-  &::after {
-    content: url('../images/elements/vector-4.svg');
-    display: block;
+
+  &-h2 {
+    color: $black;
+    text-align: center;
+    font-family: $libre;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75;
+    text-transform: uppercase;
+    &::after {
+      content: url('../images/elements/vector-4.svg');
+      display: block;
+    }
+  }
+  &-text {
+    color: $black;
+    text-align: center;
+    font-family: $bellota;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.43;
   }
 }
-.form__text {
-  color: $black;
-  text-align: center;
-  font-family: $bellota;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.43;
-}
-.form__field {
-  color: $black;
-  font-family: $libre;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  &-container {
-    @extend .form__field;
-    display: flex;
-  }
-}
-.form__input {
-  width: 100%;
-  min-height: 40px;
-  margin-top: 7px;
-  border-radius: 12px;
-  border: 1px solid $black;
-  background: $white;
-  box-shadow: 1px 1px 0px 0px #262c20;
-}
-.form {
+.modal-form__form {
   display: flex;
   flex-direction: column;
   margin-top: 24px;
@@ -88,8 +76,6 @@
       resize: none;
     }
   }
-  &__radio {
-  }
   &__submit-btn {
     margin-top: 32px;
     padding: 14px 38px;
@@ -101,5 +87,165 @@
       background: $main-green;
       transition: background-color $animation-duration $timing-function;
     }
+  }
+  &-field {
+    color: $black;
+    font-family: $libre;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    &-container {
+      @extend .modal-form__form-field;
+      display: flex;
+    }
+  }
+  &-input,
+  &-field-spam-input {
+    width: 100%;
+    height: 40px;
+    margin-top: 7px;
+    padding: 0 18px;
+    border-radius: 12px;
+    border: 1px solid $black;
+    background: $white;
+    box-shadow: 1px 1px 0px 0px #262c20;
+    transition: border-color $animation-duration $timing-function;
+
+    color: #262c20;
+    font-family: Bellota Text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.7;
+    outline: none;
+    &:hover,
+    :focus {
+      text-decoration: none;
+      background-color: #f2f6e6;
+      border-radius: 14.005px;
+      border: 2px solid var(--Black, #262c20);
+      background: var(--Light, #f2f6e6);
+      box-shadow: 1.751px 1.751px 0px 0px #262c20;
+    }
+  }
+}
+
+.modal-form__form-field {
+  &-label-radio {
+    display: flex;
+    margin-left: 21px;
+  }
+  &-male-svg,
+  &-female-svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    fill: #fff;
+    transition: fill $animation-duration $timing-function;
+    margin-right: 10px;
+  }
+  &-male-radio:checked + &-male-svg {
+    @extend %checked;
+  }
+  &-male-radio:focus-visible + &-male-svg {
+    @extend %focus;
+  }
+  &-female-radio:checked + &-female-svg {
+    @extend %checked;
+  }
+  &-female-radio:focus-visible + &-female-svg {
+    @extend %focus;
+  }
+}
+%focus {
+  border: 3px solid #000000;
+  border-radius: 40%;
+}
+%checked {
+  fill: $main-green;
+}
+.modal-form__form-field-checkbox {
+  &-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    color: var(--Black, #262c20);
+    font-family: Bellota Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &-container-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    overflow: hidden;
+    border: 3px solid #000000;
+    border-radius: 2px;
+    background-color: white;
+    transition: background-color $animation-duration $timing-function;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+    margin-left: -1px;
+    fill: white;
+    transition: fill $animation-duration $timing-function;
+  }
+  &:checked + &-container-svg {
+    background-color: $main-green;
+    & > svg {
+      fill: black;
+    }
+  }
+}
+.modal-form__form-submit-btn {
+  padding: 14px 38px;
+  border-radius: 11px;
+  border: 2px solid $black;
+  background: $orangen;
+  box-shadow: 2px 2px 0px 0px #1c2116;
+}
+.modal-form__form-field-spam {
+  &-conteiner {
+    color: #262c20;
+    font-family: Libre Caslon Text;
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  &-header {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  &-label {
+    display: flex;
+    align-items: center;
+  }
+  &-numb {
+    font-weight: 400;
+  }
+  &-input {
+    width: 92px;
+    height: 44px;
+    border-radius: 9.629px;
+    border: 2px solid #262c20;
+    background: #fff;
+    box-shadow: 1.751px 1.751px 0px 0px #262c20;
+    margin: 0 10px;
+  }
+  &-text {
+    color: #262c20;
+    font-family: Bellota Text;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 }

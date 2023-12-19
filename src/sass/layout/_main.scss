@@ -9,6 +9,7 @@
 .hero__h1-img-container {
   margin-bottom: 36px;
   position: relative;
+  overflow: hidden;
   &::after {
     content: url('../images/elements/arrow.svg');
     position: absolute;
@@ -478,8 +479,11 @@
 .customers {
   &__list {
     display: flex;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &__item {
     min-width: 120px;
@@ -497,16 +501,6 @@
   &__img-container {
     padding: 18px;
     min-width: 100%;
-    //     position: relative;
-    //     // &::after {
-    //     //   content: url('../images/elements/group_41.svg');
-    //     //   display: block;
-    //     //   position: absolute;
-    //     //   width: 15px;
-    //     //   height: 15px;
-    //     //   right: 2%;
-    //     //   bottom: 5%;
-    //     // }
   }
   &__img {
     width: 100%;
@@ -527,23 +521,3 @@
     }
   }
 }
-
-// .customers__info {
-//   &-text {
-//     display: flex;
-//   }
-//   &-item {
-//     color: #262c20;
-//     font-family: Bellota Text;
-//     font-size: 10px;
-//     font-style: normal;
-//     font-weight: 700;
-//     line-height: normal;
-//     display: flex;
-//   }
-//   &-svg {
-//     width: 10px;
-//     height: 10px;
-//     margin-right: 5px;
-//   }
-// }

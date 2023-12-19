@@ -10,4 +10,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  transition: clip-path 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }

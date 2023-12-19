@@ -8,14 +8,46 @@
       </div>
 
       <nav class="header__mobile-nav">
-        <ul class="mobile__nav-list">
-          <li class="mobile__nav-item"><a href="#" class="mobile__nav-link">Start</a></li>
-          <li class="mobile__nav-item"><a href="#" class="mobile__nav-link">Referenzen</a></li>
-          <li class="mobile__nav-item"><a href="#" class="mobile__nav-link">Impressum</a></li>
-          <li class="mobile__nav-item"><a href="#" class="mobile__nav-link">Kontakt</a></li>
+        <ul class="header__mobile-nav-list">
+          <li class="header__mobile-nav-item header__mobile-nav-item-active">
+            <a href="#" class="header__mobile-nav-link">Start</a>
+          </li>
+          <li class="header__mobile-nav-item">
+            <a href="#" class="header__mobile-nav-link">Referenzen</a>
+          </li>
+          <li class="header__mobile-nav-item">
+            <a href="#" class="header__mobile-nav-link">Impressum</a>
+          </li>
+          <li class="header__mobile-nav-item">
+            <a href="#" class="header__mobile-nav-link">Kontakt</a>
+          </li>
         </ul>
       </nav>
-      <div class="header__mobile-lang"></div>
+      <div class="header__mobile-lang">
+        <div class="header__mobile-lang-container" id="mobile-lang-box">
+          <div class="header__mobile-lang-clear">
+            <img class="header__mobile-lang-flag" src="./images/flag/flag-deutsch.png" alt="flag" />
+            <span class="header__mobile-lang-name">Deutsch</span>
+          </div>
+          <svg class="header__mobile-lang-svg">
+            <use xlink:href="./images/elements/sprite.svg#icon-down"></use>
+          </svg>
+        </div>
+        <ul class="header__mobile-lang-list visually-hidden" id="mobile-lang-list">
+          <li class="header__mobile-lang-item">
+            <img class="header__mobile-lang-flag" src="./images/flag/flag-french.png" alt="flag" />
+            <span class="header__mobile-lang-name">French</span>
+          </li>
+          <li class="header__mobile-lang-item">
+            <img class="header__mobile-lang-flag" src="./images/flag/flag-italy.png" alt="flag" />
+            <span class="header__mobile-lang-name">Italy</span>
+          </li>
+          <li class="header__mobile-lang-item">
+            <img class="header__mobile-lang-flag" src="./images/flag/flag-spain.png" alt="flag" />
+            <span class="header__mobile-lang-name">Spain</span>
+          </li>
+        </ul>
+      </div>
       <div class="header__mobile-contact">
         <a href="tel:+49 2191 5912821" class="header__mobile-contact-link">+49 2191 5912821</a>
         <a href="mailto:info[at]azzaro-lingua.de" class="header__mobile-contact-link"

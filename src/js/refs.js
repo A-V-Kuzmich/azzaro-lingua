@@ -9,4 +9,7 @@ export const refs = {
   carouselSlides: document.getElementsByClassName('.customers__item'),
   btnPrev: document.querySelector('#btn-prev'),
   nextBtn: document.querySelector('#btn-next'),
+  mobileLangBox: document.querySelector('#mobile-lang-box'),
+  mobileLangList: document.querySelector('#mobile-lang-list'),
+  mobileLangSvg: document.querySelector('.header__mobile-lang-svg'),
 };
