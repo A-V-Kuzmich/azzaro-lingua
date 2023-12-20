@@ -576,19 +576,35 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"8lqZg":[function(require,module,exports) {
 var _openModal = require("./js/open-modal");
 var _btnForm = require("./js/btn-form");
+var _slider = require("./js/slider");
 
-},{"./js/open-modal":"euVL5","./js/btn-form":"8PnBi"}],"euVL5":[function(require,module,exports) {
+},{"./js/open-modal":"euVL5","./js/btn-form":"8PnBi","./js/slider":"aMYz0"}],"euVL5":[function(require,module,exports) {
 var _refs = require("./refs");
-const { hamburger, body, modalNav } = (0, _refs.refs);
+const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg } = (0, _refs.refs);
 (()=>{
     hamburger.addEventListener("click", toggleModalMobile);
-    function toggleModalMobile() {
-        hamburger.classList.toggle("burger-active");
-        body.classList.toggle("no-scroll");
-        modalNav.classList.toggle("backdrop");
-        modalNav.classList.toggle("visually-hidden");
-    }
+    mobileLangBox.addEventListener("click", toggleModalLang);
+    mobileLangList.addEventListener("click", ModalLangChoose);
 })();
+function toggleModalMobile() {
+    hamburger.classList.toggle("burger-active");
+    body.classList.toggle("no-scroll");
+    modalNav.classList.toggle("backdrop");
+    modalNav.classList.toggle("visually-hidden");
+}
+function toggleModalLang() {
+    mobileLangSvg.classList.toggle("header__mobile-lang-svg-active");
+    mobileLangList.classList.toggle("visually-hidden");
+}
+function ModalLangChoose(e) {
+    var clickedLi = e.target.closest("li");
+    if (clickedLi) {
+        var spanContent = clickedLi.querySelector(".header__mobile-lang-name").textContent;
+        var imgSrc = clickedLi.querySelector(".header__mobile-lang-flag");
+        console.log("Span Content:", spanContent);
+        console.log("Image Src:", imgSrc.currentSrc);
+    }
+}
 
 },{"./refs":"2WoF2"}],"2WoF2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -600,7 +616,14 @@ const refs = {
     modalNav: document.querySelector("#modal-nav"),
     btnOpen: document.querySelector("#btn-form-open"),
     btnClose: document.querySelector("#btn-form-close"),
-    modalForm: document.querySelector("#modal-form")
+    modalForm: document.querySelector("#modal-form"),
+    carouselRow: document.getElementsByClassName(".customers__list"),
+    carouselSlides: document.getElementsByClassName(".customers__item"),
+    btnPrev: document.querySelector("#btn-prev"),
+    nextBtn: document.querySelector("#btn-next"),
+    mobileLangBox: document.querySelector("#mobile-lang-box"),
+    mobileLangList: document.querySelector("#mobile-lang-list"),
+    mobileLangSvg: document.querySelector(".header__mobile-lang-svg")
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -644,6 +667,29 @@ const { btnOpen, body, modalForm, btnClose } = (0, _refs.refs);
         modalForm.classList.toggle("backdrop");
         modalForm.classList.toggle("visually-hidden");
     }
+})();
+
+},{"./refs":"2WoF2"}],"aMYz0":[function(require,module,exports) {
+var _refs = require("./refs");
+const { btnPrev, nextBtn, carouselSlides, carouselRow } = (0, _refs.refs);
+(()=>{
+    let index = 1;
+    width = carouselSlides[0].clientWidth;
+    carouselRow.style.transform = "translateX(" + -width * index + "px)";
+    nextBtn.addEventListener("click", nextSlide);
+    function nextSlide() {
+        if (index >= carouselSlides.length - 1) return;
+        carouselRow.style.transition = "transform 0.4s ease-out";
+        index++;
+        carouselRow.style.transform = "translateX(" + -width * index + "px)";
+    }
+// hamburger.addEventListener('click', toggleModalMobile);
+// function toggleModalMobile() {
+//   hamburger.classList.toggle('burger-active');
+//   body.classList.toggle('no-scroll');
+//   modalNav.classList.toggle('backdrop');
+//   modalNav.classList.toggle('visually-hidden');
+// }
 })();
 
 },{"./refs":"2WoF2"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire4254")
