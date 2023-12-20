@@ -251,8 +251,6 @@ body::-webkit-scrollbar {
 }
 
 .header__mobile-modal {
-  overflow-x: auto;
-  overflow-y: none;
   background: #f2f6e6;
   border: 4px solid #262c20;
   border-radius: 8px 0 0 8px;
@@ -260,6 +258,8 @@ body::-webkit-scrollbar {
   height: 640px;
   margin-left: auto;
   margin-right: -16px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header__logo-modal-container {
