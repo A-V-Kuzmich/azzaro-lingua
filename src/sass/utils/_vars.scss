@@ -20,12 +20,24 @@ $light: #f2f6e6;
 $orangen: #ffc01d;
 $modal-backdrop: rgba(38, 44, 32, 0.6);
 
+//validation
+$succes: #9ed821;
+$error: #ffc01d;
+$background: #fff;
+$disable: #f2f6e6;
+$focus: #262c20;
+$box-shadow-succes: 1.751px 1.751px 0px 0px $succes;
+$box-shadow-error: 1.751px 1.751px 0px 0px $error;
+$box-shadow: 1.751px 1.751px 0px 0px $focus;
+
 //shadows
 $cards-shadows-box: 8px -6px 16px -2px;
 $btn-shadow-color: rgba(255, 107, 1, 0.6);
 $filters-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 $cards-shadow-color: rgba(73, 73, 73, 0.95);
 
+$shadow-col: #262c2072;
+$shadow-: #9ed821a2;
 //font
 $libre: Libre Caslon Text;
 $bellota: Bellota Text;
@@ -41,3 +53,7 @@ $desktop: 1366px;
 //transition
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $animation-duration: 250ms;
+
+//scroll config
+$scroll-width: 0.6em;
+$scroll-gradient: linear-gradient(#9ed82187, $shadow-col, #9ed82187);

@@ -1,0 +1,31 @@
+%disable {
+  border-radius: 14px;
+  border: 2px solid $disable;
+  box-shadow: $box-shadow;
+}
+%error {
+  border-radius: 14px;
+  border: 2px solid $error;
+  box-shadow: $box-shadow-error;
+}
+%succes {
+  border-radius: 14px;
+  border: 2px solid $succes;
+  box-shadow: $box-shadow-succes;
+  &::after {
+    content: '';
+  }
+}
+%hover-focus {
+  text-decoration: none;
+  border-radius: 14px;
+  border: 2px solid $focus;
+  box-shadow: $box-shadow;
+}
+%checked {
+  fill: $succes;
+}
+%focus {
+  border: 3px solid #000000;
+  border-radius: 40%;
+}

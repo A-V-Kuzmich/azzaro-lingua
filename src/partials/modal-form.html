@@ -21,6 +21,7 @@
                 type="radio"
                 name="gender"
                 value="male"
+                required
               />
               <svg class="modal-form__form-field-male-svg">
                 <use xlink:href="./images/elements/sprite.svg#icon-radio-button"></use>
@@ -33,6 +34,7 @@
                 type="radio"
                 name="gender"
                 value="female"
+                required
               />
               <svg class="modal-form__form-field-female-svg">
                 <use xlink:href="./images/elements/sprite.svg#icon-radio-button"></use>
@@ -42,26 +44,64 @@
           </div>
           <label class="modal-form__form-field">
             Vorname *
-            <input class="modal-form__form-input" type="text" name="firstName" />
+            <input
+              class="modal-form__form-input"
+              type="text"
+              name="firstName"
+              minlength="2"
+              required
+              placeholder=" "
+            />
           </label>
           <label class="modal-form__form-field">
             Nachname *
-            <input class="modal-form__form-input" type="text" name="lastName" />
+            <input
+              class="modal-form__form-input"
+              type="text"
+              name="lastName"
+              minlength="2"
+              required
+              placeholder=" "
+            />
           </label>
           <label class="modal-form__form-field"
-            >Internet *<input class="modal-form__form-input" type="text" name="link" />
+            >Internet *<input
+              class="modal-form__form-input"
+              type="text"
+              name="link"
+              minlength="3"
+              required
+              placeholder=" "
+            />
           </label>
           <label class="modal-form__form-field"
-            >E-Post *<input class="modal-form__form-input" type="email" name="email" />
+            >E-Post *<input
+              class="modal-form__form-input"
+              type="email"
+              name="email"
+              minlength="5"
+              required
+              placeholder=" "
+            />
           </label>
           <label class="modal-form__form-field"
-            >Betreff *<input class="modal-form__form-input" type="text" name="theme" />
+            >Betreff *<input
+              class="modal-form__form-input"
+              type="text"
+              name="theme"
+              minlength="5"
+              required
+              placeholder=" "
+            />
           </label>
           <label class="modal-form__form-field">
             Nachricht *<textarea
               class="modal-form__form-input"
               type="text"
               name="message"
+              minlength="5"
+              required
+              placeholder=" "
             ></textarea>
           </label>
           <label class="modal-form__form-field-checkbox-label">
@@ -69,6 +109,7 @@
               class="modal-form__form-field-checkbox visually-hidden"
               class=""
               type="checkbox"
+              required
             />
             <span class="modal-form__form-field-checkbox-container-svg">
               <svg class="modal-form__form-field-checkbox-svg">
@@ -81,7 +122,13 @@
             <span class="modal-form__form-field-spam-header">Spamschutz:*</span>
             <label class="modal-form__form-field-spam-label">
               <span class="modal-form__form-field-spam-numb">34 - 1 =</span>
-              <input class="modal-form__form-field-spam-input" type="number" />
+              <input
+                class="modal-form__form-field-spam-input"
+                type="number"
+                minlength="1"
+                required
+                placeholder=" "
+              />
               <span class="modal-form__form-field-spam-text">(Rechenaufgabe lösen)</span>
             </label>
           </div>

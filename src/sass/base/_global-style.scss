@@ -4,3 +4,18 @@ html {
 .no-scroll {
   overflow: hidden;
 }
+body::-webkit-scrollbar {
+  @extend %scroll-size;
+}
+
+body::-webkit-scrollbar-thumb {
+  @extend %scroll-config;
+}
+
+%scroll-config {
+  background-image: linear-gradient(#9ed82187, $shadow-col, #9ed82187);
+  border-radius: 5px;
+}
+%scroll-size {
+  width: 0.6em;
+}
