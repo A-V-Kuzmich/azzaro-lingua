@@ -14,30 +14,55 @@
         <div>
           <span class="contact__span">Kontakt</span>
           <address class="contact__addres">
-            <a href="tel:+49 2191 5912821" class="contact__address-link">+49 2191 5912821</a>
-            <a href="mailto:info[at]azzaro-lingua.de" class="contact__address-link">
-              info[at]azzaro-lingua.de</a
-            >
+            <a href="tel:+49 2191 5912821" class="contact__addres-link">
+              <span class="contact__addres-link-container-svg">
+                <svg class="contact__addres-link-svg">
+                  <use xlink:href="./images/elements/sprite.svg#icon-Phone"></use>
+                </svg>
+              </span>
+              +49 2191 5912821
+            </a>
+            <a href="mailto:info[at]azzaro-lingua.de" class="contact__addres-link">
+              <span class="contact__addres-link-container-svg">
+                <svg class="contact__addres-link-svg">
+                  <use xlink:href="./images/elements/sprite.svg#icon-Mail"></use>
+                </svg>
+              </span>
+              info[at]azzaro-lingua.de
+            </a>
           </address>
         </div>
         <ul class="contact__list">
           <li class="contact__item">
-            <a href="#" class="contact__link"><img src="./images/elements/twitter.svg" alt="" /></a>
-          </li>
-          <li class="contact__item">
-            <a href="#" class="contact__link">
-              <img src="./images/elements/facebook.svg" alt="" />
+            <a href="#" class="contact__addres-link" target="_blank">
+              <span class="contact__addres-link-container-svg">
+                <svg class="contact__addres-link-svg">
+                  <use xlink:href="./images/elements/sprite.svg#icon-facebook"></use>
+                </svg>
+              </span>
+              <!-- <img src="./images/elements/twitter.svg" alt="" /> -->
             </a>
           </li>
           <li class="contact__item">
-            <a href="#" class="contact__link"><img src="./images/elements/yewcom.svg" alt="" /></a>
+            <a href="#" class="contact__addres-link" target="_blank">
+              <span class="contact__addres-link-container-svg">
+                <svg class="contact__addres-link-svg">
+                  <use xlink:href="./images/elements/sprite.svg#icon-facebook"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="contact__item">
+            <a href="#" class="contact__addres-link" target="_blank">
+              <span class="contact__addres-link-container-svg">
+                <svg class="contact__addres-link-svg">
+                  <use xlink:href="./images/elements/sprite.svg#icon-xing"></use>
+                </svg>
+              </span>
+            </a>
           </li>
         </ul>
       </article>
-      <div class="footer__hosting">
-        <h2 class="hosting__h2">webhosting</h2>
-        <img src="./images/elements/yewcom-logo.svg" alt="yewcom-logo" class="hosting__img" />
-      </div>
       <a href="#header" class="footer__btn-up">
         <svg class="footer__btn-up-svg">
           <use xlink:href="./images/elements/sprite.svg#icon-Btn_up"></use>
@@ -46,15 +71,39 @@
     </div>
     <div class="creator">
       <div class="creator__info">
-        <span class="creator__info-design">
-          Innovation und Kreativität für eine dynamische Welt
-        </span>
-        <span class="creator__info-development">
-          <span class="creator__info-development-item">Website development</span>
-          <span class="creator__info-development-item">Andrii Kuzmichev</span></span
-        >
+        <div class="creator__info-design-container">
+          <span class="creator__info-design-text"> UX und UI design </span>
+          <span class="creator__info-design-link-container">
+            <a
+              class="creator__info-design-link"
+              href="https://www.linkedin.com/in/uiuxnisha/"
+              target="_blank"
+              >Nisha Singh</a
+            >
+            <span class="creator__info-design-link-el"> | </span>
+            <a class="creator__info-design-link" href="https://shaola.com.ua/" target="_blank"
+              >Olga Plikhivska</a
+            >
+          </span>
+        </div>
+        <div class="creator__info-develop-container">
+          <span class="creator__info-develop-text">Website development</span>
+          <a
+            class="creator__info-develop-link"
+            href="https://www.linkedin.com/in/a-kuzmichev/"
+            target="_blank"
+            >Andrii Kuzmichev</a
+          >
+        </div>
+        <div class="creator__hosting-container">
+          <h2 class="creator__hosting-h2">webhosting</h2>
+          <img
+            src="./images/elements/yewcom-logo.svg"
+            alt="yewcom logo hosting"
+            class="creator__hosting-img"
+          />
+        </div>
       </div>
-      <img class="creator__img" src="./images/elements/Logo NISAO_correct.svg" alt="nisao logo" />
     </div>
     <span class="footer__copy">© Copyright - Azzaro Lingua 2013 - 2023</span>
   </div>

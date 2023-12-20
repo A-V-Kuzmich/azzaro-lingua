@@ -6,7 +6,8 @@
   border: 4px solid $black;
   margin-right: -16px;
   margin-left: auto;
-  overflow-y: auto;
+  overflow-x: auto;
+  overflow-y: none;
 }
 
 .header__logo-modal-container {
@@ -84,7 +85,6 @@
     padding: 21px 12px 15px 12px;
     justify-content: center;
     align-items: center;
-    gap: 28px;
     cursor: pointer;
   }
   &-flag {
