@@ -1,6 +1,6 @@
 .header {
   height: 50px;
-  background: var(--main-green);
+  background: $main-green;
 }
 
 .header__container {
@@ -15,9 +15,9 @@
 
 .header__logo-link {
   border-radius: 0px 0px 8px 8px;
-  border: 4px solid var(--black);
+  border: 4px solid $black;
   border-top: 0px;
-  background: var(--main-green);
+  background: $main-green;
   padding: 20px 28px 20px;
   margin-top: -4px;
   width: 226px;

@@ -36,16 +36,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
-}
 
-.footer__nav-link {
-  color: $white;
-  font-size: 20px;
-  font-family: $bellota;
-  font-weight: 700;
+  &-link {
+    color: $white;
+    font-size: 20px;
+    font-family: $bellota;
+    font-weight: 700;
 
-  &:first-child {
-    margin-bottom: 20px;
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    &:hover,
+    :focus {
+      color: $orangen;
+    }
   }
 }
 
@@ -78,25 +82,21 @@
     line-height: 1.22;
     display: flex;
     align-items: center;
+    &:hover,
+    :focus {
+      color: $orangen;
+    }
     &:hover > &-container-svg {
       background: $orangen;
+      color: $orangen;
     }
     &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
   &-link-container-svg {
-    display: block;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $main-green;
-    border-radius: 50%;
-    margin-right: 15px;
+    @extend%icon-container;
     fill: $black;
-
     filter: drop-shadow(1px 1px 0px #fff);
   }
 
@@ -160,11 +160,16 @@
     font-size: 16px;
   }
   &-link {
-    color: #9ed821;
+    color: $main-green;
     font-size: 20px;
     line-height: 1.4;
     text-decoration-line: underline;
     text-transform: capitalize;
+    transition: color $animation-duration $timing-function;
+    &:hover,
+    :focus {
+      color: $orangen;
+    }
   }
 }
 .creator__info-develop {
@@ -187,9 +192,13 @@
     @extend .creator__info-design-text;
     margin-bottom: 13px;
   }
-  &-img {
+  &-link {
+    display: inline-block;
     width: 192px;
     height: 36px;
+  }
+  &-link:hover + &-h2 {
+    color: $orangen;
   }
 }
 

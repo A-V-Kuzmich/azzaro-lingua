@@ -19,3 +19,14 @@ body::-webkit-scrollbar-thumb {
 %scroll-size {
   width: 0.6em;
 }
+%icon-container {
+  display: block;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $main-green;
+  border-radius: 50%;
+  margin-right: 15px;
+}
