@@ -30,3 +30,24 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   margin-right: 15px;
 }
+
+%devider-after-h2 {
+  color: $black;
+  font-family: $libre;
+
+  &::after {
+    content: url('../images/elements/devider.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 169px;
+    height: 12px;
+    margin: 12px auto 0;
+
+    @media screen and (min-width: $desktop) {
+      width: 224px;
+      height: 15px;
+      margin: 10px auto 0;
+    }
+  }
+}

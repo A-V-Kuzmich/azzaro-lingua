@@ -5,139 +5,144 @@
     background-image: linear-gradient(to bottom, $main-green 56%, $black 50%);
     overflow: hidden;
   }
-}
-.hero__container {
-  padding-bottom: 31px;
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 70px;
-    padding-bottom: 173px;
-  }
-}
-.hero__h1 {
-  &-container {
-    margin-bottom: 36px;
-    position: relative;
 
-    &::after {
-      content: url('../images/elements/arrow.svg');
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      bottom: 0;
-      transform: translate(0, 100%);
-    }
-
+  &__container {
+    padding-bottom: 31px;
     @media screen and (min-width: $desktop) {
-      width: 730px;
-    }
-  }
-  &-img {
-    width: 100%;
-  }
-}
-
-.hero__img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 8px 12px 21px 0px rgba(0, 0, 0, 0.19);
-
-  &-container {
-    width: 330px;
-    position: relative;
-
-    @media screen and (min-width: $desktop) {
-      flex-basis: 557px;
-    }
-  }
-}
-.hero__flags {
-  &-container {
-    border-radius: 6px;
-    border: 3px solid $black;
-    background: $main-green;
-    position: absolute;
-    right: 6px;
-    bottom: -32px;
-
-    @media screen and (min-width: $desktop) {
-      right: -20px;
-      bottom: -14px;
-    }
-  }
-  &-ul {
-    padding: 18px 14px;
-
-    @media screen and (min-width: $desktop) {
-      padding: 28px 20px;
-    }
-  }
-  &-li {
-    & > img {
-      width: 32px;
-      height: 21px;
-
-      @media screen and (min-width: $desktop) {
-        width: 60px;
-        height: 40px;
-      }
-    }
-    &:not(:last-child) {
-      margin-bottom: 11px;
-
-      @media screen and (min-width: $desktop) {
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
-.hero__info-container {
-  display: none;
-
-  @media screen and (min-width: $desktop) {
-    display: block;
-    width: 660px;
-    margin-right: 0;
-    margin-left: auto;
-
-    &-text {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
+      padding-top: 70px;
+      padding-bottom: 173px;
     }
   }
-  &-mobile {
+
+  &__h1 {
+    &-container {
+      margin-bottom: 36px;
+      position: relative;
+
+      &::after {
+        content: url('../images/elements/arrow.svg');
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, 100%);
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 730px;
+      }
+    }
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 8px 12px 21px 0px rgba(0, 0, 0, 0.19);
+
+    &-container {
+      width: 330px;
+      position: relative;
+
+      @media screen and (min-width: $desktop) {
+        flex-basis: 557px;
+      }
+    }
+  }
+
+  &__flags {
+    &-container {
+      border-radius: 6px;
+      border: 3px solid $black;
+      background: $main-green;
+      position: absolute;
+      right: 6px;
+      bottom: -32px;
+
+      @media screen and (min-width: $desktop) {
+        right: -20px;
+        bottom: -14px;
+      }
+    }
+    &-ul {
+      padding: 18px 14px;
+
+      @media screen and (min-width: $desktop) {
+        padding: 28px 20px;
+      }
+    }
+    &-li {
+      & > img {
+        width: 32px;
+        height: 21px;
+
+        @media screen and (min-width: $desktop) {
+          width: 60px;
+          height: 40px;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 11px;
+
+        @media screen and (min-width: $desktop) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__info-container {
+    display: none;
+
     @media screen and (min-width: $desktop) {
-      display: none;
+      display: block;
+      width: 660px;
+      margin-right: 0;
+      margin-left: auto;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    &-mobile {
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
     }
   }
-}
-.hero__h2 {
-  color: $main-green;
-  font-size: 45px;
-  font-family: $bellota;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 16px;
 
-  @media screen and (min-width: $desktop) {
-    font-size: 64px;
-    line-height: 0.75;
-    margin-bottom: 28px;
+  &__h2 {
+    color: $main-green;
+    font-size: 45px;
+    font-family: $bellota;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 64px;
+      line-height: 0.75;
+      margin-bottom: 28px;
+    }
   }
-}
 
-.hero__info {
-  color: $white;
-  font-size: 22px;
-  font-family: $bellota;
-  font-weight: 700;
+  &__info {
+    color: $white;
+    font-size: 22px;
+    font-family: $bellota;
+    font-weight: 700;
 
-  @media screen and (min-width: $desktop) {
-    font-size: 32px;
-    text-align: right;
+    @media screen and (min-width: $desktop) {
+      font-size: 32px;
+      text-align: right;
+    }
   }
 }
 
@@ -152,6 +157,8 @@
   }
 
   &__h2 {
+    @extend %devider-after-h2;
+
     color: $black;
     text-align: center;
     font-size: 24px;
@@ -271,10 +278,38 @@
 
 .program {
   background: $main-green;
-  padding-top: 31px;
-  padding-bottom: 77px;
+  padding: 31px 0 77px;
   position: relative;
   overflow: hidden;
+
+  @media screen and (min-width: $desktop) {
+    padding: 162px 0;
+  }
+
+  &__container {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__h2 {
+    @extend %devider-after-h2;
+
+    font-size: 20px;
+    line-height: 1.4;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 1.33;
+      margin-bottom: 34px;
+
+      &::after {
+        margin: 20px auto 20px 0;
+      }
+    }
+  }
 
   &__description {
     color: $black;
@@ -283,54 +318,62 @@
     font-weight: 700;
     line-height: 1.22;
     margin-bottom: 37px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 1.67;
+    }
   }
 
-  &__img-container {
-    position: relative;
-
-    & > img {
+  &__img {
+    &-container {
       position: relative;
-      z-index: 1;
+
+      & > img {
+        position: relative;
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 992px;
+        height: 911px;
+        border-radius: 50%;
+        opacity: 0.3;
+        background: $white;
+        top: 0;
+        left: 0;
+        transform: translate(-35%, 13%);
+
+        @media screen and (min-width: $desktop) {
+          transform: translate(21%, -10%);
+        }
+      }
     }
 
-    &::after {
-      content: '';
+    &-mobile {
       display: block;
-      position: absolute;
-      width: 992px;
-      height: 911px;
-      border-radius: 50%;
-      opacity: 0.3;
-      background: $white;
-      top: 0;
-      left: 0;
-      transform: translate(-35%, 13%);
+
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
+    }
+
+    &-desctop {
+      display: none;
+
+      @media screen and (min-width: $desktop) {
+        display: block;
+      }
     }
   }
 }
 
-.program__h2,
 .description__h2,
-.customers__h2,
-.services__h2 {
-  color: $black;
-  font-family: $libre;
-
-  &::after {
-    content: url('../images/elements/devider.svg');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 169px;
-    height: 12px;
-    margin: 12px auto 0;
-
-    @media screen and (min-width: $desktop) {
-      width: 224px;
-      height: 15px;
-      margin: 10px auto 0;
-    }
-  }
+.customers__h2 {
+  @extend %devider-after-h2;
 }
 
 .description {
