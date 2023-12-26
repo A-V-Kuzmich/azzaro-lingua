@@ -560,30 +560,76 @@
 
 .license {
   background: $black;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 
-  &__h2-container {
-    margin-bottom: 36px;
-    position: relative;
+  @media screen and (min-width: $desktop) {
+    padding: 115px 0;
+    overflow: hidden;
+  }
 
-    &::after {
-      content: url('../images/elements/vector-4-2.svg');
-      display: block;
-      position: relative;
+  &-container {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
+  &__text-container {
+    @media screen and (min-width: $desktop) {
+      width: 766px;
+    }
+  }
+
+  &__h2-container {
+    margin-bottom: 23px;
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+      width: 729px;
+      margin-bottom: 0;
+    }
+  }
+
   &__h2-img {
     width: 100%;
-    margin-bottom: 23px;
   }
+
   &__description {
     color: $light;
     font-size: 16px;
     font-family: $bellota;
     font-weight: 700;
-    line-height: 1.22;
+    line-height: 1.37;
     margin-bottom: 23px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 1.67;
+      margin-left: 114px;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: url('../images/elements/devider-white.svg');
+      display: block;
+      width: 130px;
+      margin-bottom: 36px;
+
+      @media screen and (min-width: $desktop) {
+        width: 223px;
+        margin-bottom: 36px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+
+    &-container {
+      @media screen and (min-width: $desktop) {
+        width: 819px;
+        margin-right: -106px;
+      }
+    }
   }
 }
 
