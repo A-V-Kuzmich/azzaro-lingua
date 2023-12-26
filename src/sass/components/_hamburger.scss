@@ -21,18 +21,13 @@
     opacity: 0.7;
   }
 }
-@media screen and (min-width: 1366px) {
-  .hamburger {
-    display: none;
-  }
-}
 .hamburger.burger-active:hover {
   opacity: 0.7;
 }
 .hamburger.burger-active .hamburger-inner,
 .hamburger.burger-active .hamburger-inner::before,
 .hamburger.burger-active .hamburger-inner::after {
-  background-color: var(--hamburger-open);
+  background-color: $hamburger;
 }
 .hamburger-box {
   width: 40px;
@@ -50,7 +45,7 @@
 .hamburger-inner::after {
   width: 30px;
   height: 4px;
-  background-color: var(--hamburger);
+  background-color: $hamburger;
   border-radius: 4px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;

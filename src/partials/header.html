@@ -1,7 +1,22 @@
 <header class="header" id="header">
   <div class="container">
     <div class="header__container">
-      <nav class="header__nav"></nav>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item header__nav-item-active">
+            <a href="#" class="header__nav-link">Start</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Referenzen</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Impressum</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
       <a class="header__logo-link" href="#">
         <img
           class="header__logo-img"
@@ -9,6 +24,47 @@
           alt="logo Azzaro Lingua"
         />
       </a>
+      <div class="header__contact">
+        <a href="tel:+49 2191 5912821" class="header__contact-link">
+          <span class="header__contact-link-container-svg">
+            <svg class="header__contact-link-svg">
+              <use xlink:href="./images/elements/sprite.svg#icon-Phone"></use>
+            </svg>
+          </span>
+          +49 2191 5912821
+        </a>
+        <a href="mailto:info[at]azzaro-lingua.de" class="header__contact-link">
+          <span class="header__contact-link-container-svg">
+            <svg class="header__contact-link-svg">
+              <use xlink:href="./images/elements/sprite.svg#icon-Mail"></use>
+            </svg>
+          </span>
+          info[at]azzaro-lingua.de
+        </a>
+      </div>
+
+      <div class="header__lang">
+        <div class="header__lang-container" id="lang-box">
+          <div class="header__lang-clear">
+            <img class="header__lang-flag" src="./images/flag/flag-deutsch.png" alt="flag" />
+          </div>
+          <svg class="header__lang-svg">
+            <use xlink:href="./images/elements/sprite.svg#icon-down"></use>
+          </svg>
+        </div>
+        <ul class="header__lang-list visually-hidden" id="lang-list">
+          <li class="header__lang-item">
+            <img class="header__lang-flag" src="./images/flag/flag-french.png" alt="flag" />
+          </li>
+          <li class="header__lang-item">
+            <img class="header__lang-flag" src="./images/flag/flag-italy.png" alt="flag" />
+          </li>
+          <li class="header__lang-item">
+            <img class="header__lang-flag" src="./images/flag/flag-spain.png" alt="flag" />
+          </li>
+        </ul>
+      </div>
+
       <button class="hamburger hamburger--emphatic" type="button" hamburger>
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>

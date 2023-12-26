@@ -1,20 +1,7 @@
-:root {
-  --main-green: #9ed821;
-  --black: #262c20;
-  --hamburger: #292d32;
-  --hamburger-open: var(--hamburger);
-  --white: #fff;
-  --libre: Libre Caslon Text;
-  --belota: Bellota Text;
-  --light: #f2f6e6;
-  --orangen: #ffc01d;
-}
-
 //colors
 $main-green: #9ed821;
 $black: #262c20;
 $hamburger: #292d32;
-$hamburger-open: $hamburger;
 $white: #fff;
 $light: #f2f6e6;
 $orangen: #ffc01d;
@@ -49,7 +36,7 @@ $mobile: 360px;
 // $tablet: 768px;
 $tablet: 360px;
 // $desktop: 1024px;
-$desktop: 1366px;
+$desktop: 1440px;
 
 //transition
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
