@@ -2,7 +2,7 @@
   background-image: linear-gradient(to bottom, $main-green 50%, $black 50%);
 
   @media screen and (min-width: $desktop) {
-    background-image: linear-gradient(to bottom, $main-green 56%, $black 50%);
+    background-image: linear-gradient(to bottom, $main-green 57%, $black 50%);
     overflow: hidden;
   }
 
@@ -11,8 +11,7 @@
     @media screen and (min-width: $desktop) {
       display: flex;
       justify-content: space-between;
-      padding-top: 70px;
-      padding-bottom: 173px;
+      padding: 84px 29px 173px 5px;
     }
   }
 
@@ -22,12 +21,24 @@
       position: relative;
 
       &::after {
-        content: url('../images/elements/arrow.svg');
+        content: '';
+        background: url('../images/elements/arrow.svg') no-repeat;
+        background-size: contain;
         position: absolute;
-        z-index: 1;
-        right: 0;
-        bottom: 0;
+        z-index: 2;
+        bottom: -10px;
+        right: 10px;
         transform: translate(0, 100%);
+        width: 72px;
+        height: 117px;
+
+        @media screen and (min-width: $desktop) {
+          width: 101px;
+          height: 166px;
+          bottom: 0;
+          right: 0;
+          transform: translate(84px, 127px);
+        }
       }
 
       @media screen and (min-width: $desktop) {
@@ -44,6 +55,8 @@
     border-radius: 8px;
     object-fit: contain;
     box-shadow: 8px 12px 21px 0px rgba(0, 0, 0, 0.19);
+    position: relative;
+    z-index: 1;
 
     &-container {
       width: 330px;
@@ -51,6 +64,20 @@
 
       @media screen and (min-width: $desktop) {
         flex-basis: 557px;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 151px;
+          height: 151px;
+          opacity: 0.3;
+          background: #fff;
+          border-radius: 50%;
+          z-index: 0;
+          top: 80px;
+          left: -41px;
+        }
       }
     }
   }
@@ -63,6 +90,7 @@
       position: absolute;
       right: 6px;
       bottom: -32px;
+      z-index: 2;
 
       @media screen and (min-width: $desktop) {
         right: -20px;
@@ -102,8 +130,8 @@
     @media screen and (min-width: $desktop) {
       display: block;
       width: 660px;
-      margin-right: 0;
-      margin-left: auto;
+      margin-left: 128px;
+      margin-bottom: 15px;
 
       &-text {
         display: flex;
@@ -298,6 +326,10 @@
 
     font-size: 20px;
     line-height: 1.4;
+    &::after {
+      width: 130px;
+      margin: 20px auto 20px 0;
+    }
 
     @media screen and (min-width: $desktop) {
       font-size: 60px;
@@ -307,6 +339,7 @@
 
       &::after {
         margin: 20px auto 20px 0;
+        width: 223px;
       }
     }
   }

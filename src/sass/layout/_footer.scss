@@ -1,9 +1,39 @@
 .footer {
   background: #262c20;
-  padding: 48px 0 34px;
+  overflow: hidden;
 
-  @media screen and (min-width: $desktop) {
-    padding: 103px 0 78px;
+  &__container {
+    padding: 48px 0 34px;
+
+    @media screen and (min-width: $desktop) {
+      padding: 103px 0 78px;
+      position: relative;
+
+      &::before {
+        content: '';
+        opacity: 0.5;
+        background: $main-green;
+        opacity: 0.1;
+        border-radius: 50%;
+        width: 330px;
+        height: 330px;
+        position: absolute;
+        top: -130px;
+        right: -12px;
+        transform: translate(100%, 0);
+      }
+      &::after {
+        content: '';
+        background: $main-green;
+        opacity: 0.03;
+        border-radius: 50%;
+        width: 610px;
+        height: 610px;
+        position: absolute;
+        top: 67px;
+        left: -472px;
+      }
+    }
   }
 }
 
@@ -15,6 +45,19 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 111px;
+
+    &::after {
+      content: '';
+      background: $orangen;
+      opacity: 0.1;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 186px;
+      right: -127px;
+      transform: translate(100%, -50%);
+    }
   }
 }
 

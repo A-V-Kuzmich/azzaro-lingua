@@ -1,6 +1,5 @@
 .header {
   background: $main-green;
-  padding-bottom: 20px;
 }
 
 .header__container {
@@ -9,6 +8,7 @@
   justify-content: center;
 
   @media screen and (min-width: $desktop) {
+    height: 68px;
     border-bottom: 1px solid $black;
     justify-content: space-between;
     align-items: center;
@@ -32,18 +32,24 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
-    &-active::before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 48px;
-      height: 48px;
-      background-color: $black;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: screen;
+    &-active {
+      & > a {
+        color: $white;
+        position: relative;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        background-color: $black;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
   &-link {
@@ -71,8 +77,9 @@
     padding: 13px 28px;
 
     @media screen and (min-width: $desktop) {
-      border-width: 0 8px 8px 4px;
+      border-width: 0 4px 4px 4px;
       padding: 16px 28px 16px 28px;
+      box-shadow: 5px 5px 0px 0px #262c20;
     }
   }
 
@@ -134,12 +141,13 @@
     border: 2px solid $black;
 
     fill: $black;
-    filter: drop-shadow(2px 2px 1px #262c20);
+    filter: drop-shadow(1px 1px 0px #262c20);
     margin-right: 8px;
     transition: background-color $animation-duration $timing-function;
   }
   &-link-svg {
-    @extend .contact__addres-link-svg;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -150,18 +158,19 @@
   }
 
   position: relative;
-  // display: flex;
 
   &-container {
     display: flex;
     align-items: center;
     height: 60px;
-  }
-  &-clear {
-    padding: 10px 12px;
+
+    &:hover > .header__lang-svg {
+      fill: $orangen;
+    }
   }
   &-svg {
     width: 24px;
+    transition: fill $animation-duration $timing-function;
   }
   &-flag {
     width: 36px;
@@ -184,8 +193,5 @@
     &:first-child {
       padding-top: 0;
     }
-    // & > img {
-    //   padding: 10px;
-    // }
   }
 }
