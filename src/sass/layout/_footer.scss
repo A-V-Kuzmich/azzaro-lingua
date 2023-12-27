@@ -1,32 +1,74 @@
 .footer {
   background: #262c20;
-  padding-top: 40px;
-  padding-bottom: 28px;
+  padding: 48px 0 34px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 103px 0 78px;
+  }
 }
 
 .footer__container-info {
   position: relative;
   padding-bottom: 33px;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 111px;
+  }
 }
 
-.footer__h2 {
-  color: $white;
-  text-align: center;
-  font-size: 35px;
-  font-family: $libre;
-  font-weight: 700;
-  line-height: 50px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
+.footer__text {
+  &-container {
+    @media screen and (min-width: $desktop) {
+      width: 531px;
+    }
+  }
 
-.footer__span-loc {
-  display: inline-block;
-  color: $main-green;
-  font-size: 18px;
-  font-family: $bellota;
-  font-weight: 700;
-  margin-bottom: 20px;
+  &-h2 {
+    color: $white;
+    text-align: center;
+    font-size: 35px;
+    font-family: $libre;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-span {
+    display: inline-block;
+    color: $main-green;
+    font-size: 18px;
+    font-family: $bellota;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-text {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: inline-block;
+      color: $white;
+      font-family: $bellota;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.67;
+    }
+  }
 }
 
 .footer__nav {
@@ -36,6 +78,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    background: transparent;
+    flex-direction: column;
+    flex-wrap: unset;
+    justify-content: unset;
+    margin-bottom: 0;
+    padding: 0;
+    flex-shrink: 0;
+  }
 
   &-link {
     color: $white;
@@ -50,6 +102,14 @@
     :focus {
       color: $orangen;
     }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
   }
 }
 
@@ -57,61 +117,116 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-}
 
-.contact__span {
-  display: inline-block;
-  color: $white;
-  font-size: 16px;
-  font-family: $libre;
-  font-weight: 600;
-  line-height: 1.28;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
+  @media screen and (min-width: $desktop) {
+    flex-shrink: 0;
+    flex-direction: column;
+    margin-bottom: 0;
+    justify-content: normal;
+    margin-right: 30px;
+  }
 
-.contact__addres {
-  display: flex;
-  flex-direction: column;
-
-  &-link {
+  &__container {
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 44px;
+    }
+  }
+  &__span {
+    display: inline-block;
     color: $white;
     font-size: 16px;
-    font-family: $bellota;
-    font-weight: 700;
-    line-height: 1.22;
+    font-family: $libre;
+    font-weight: 600;
+    line-height: 1.28;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 1.67;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__addres {
     display: flex;
-    align-items: center;
-    &:hover,
-    :focus {
-      color: $orangen;
+    flex-direction: column;
+
+    &-link {
+      color: $white;
+      font-size: 16px;
+      font-family: $bellota;
+      font-weight: 700;
+      line-height: 1.22;
+      display: flex;
+      align-items: center;
+
+      &:hover,
+      :focus {
+        color: $orangen;
+      }
+      &:hover > &-container-svg {
+        background: $orangen;
+        color: $orangen;
+      }
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        font-size: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
     }
-    &:hover > &-container-svg {
-      background: $orangen;
-      color: $orangen;
+
+    &-link-container-svg {
+      @extend%icon-container;
+      fill: $black;
+      border: 2px solid #fff;
+      filter: drop-shadow(2px 2px 0px #fff);
+
+      @media screen and (min-width: $desktop) {
+        width: 40px;
+        height: 40px;
+      }
     }
+
+    &-link-svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+
+      @media screen and (min-width: $desktop) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    margin-right: 15px;
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
-  }
-  &-link-container-svg {
-    @extend%icon-container;
-    fill: $black;
-    filter: drop-shadow(1px 1px 0px #fff);
-  }
 
-  &-link-svg {
-    display: block;
-    width: 18px;
-    height: 18px;
-  }
-}
+    @media screen and (min-width: $desktop) {
+      margin-right: 0;
 
-.contact__item {
-  margin-right: 15px;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
+      &:not(:last-child) {
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -129,6 +244,11 @@
     &:hover {
       fill: $white;
     }
+
+    @media screen and (min-width: $desktop) {
+      width: 111px;
+      height: 82px;
+    }
   }
 }
 
@@ -143,21 +263,49 @@
   text-transform: uppercase;
   line-height: 1.75;
 
+  @media screen and (min-width: $desktop) {
+    line-height: 1.67;
+    text-align: start;
+  }
+
   &__info {
     margin-top: 57px;
+    margin-bottom: 33px;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 90px;
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & > div {
+      margin-bottom: 28px;
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
+
 .creator__info-design {
   &-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 28px;
+
+    @media screen and (min-width: $desktop) {
+      align-items: normal;
+    }
   }
 
   &-text {
     margin-bottom: 4px;
     font-size: 16px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+    }
   }
   &-link {
     color: $main-green;
@@ -166,9 +314,26 @@
     text-decoration-line: underline;
     text-transform: capitalize;
     transition: color $animation-duration $timing-function;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.63;
+    }
+
     &:hover,
     :focus {
       color: $orangen;
+    }
+
+    &-el {
+      @extend .creator__info-design-link;
+      text-decoration-line: none;
+      margin: 0 5px;
+      &:hover,
+      :focus {
+        color: $main-green;
+      }
     }
   }
 }
@@ -186,19 +351,31 @@
 
 .creator__hosting {
   &-container {
-    margin-bottom: 33px;
   }
   &-h2 {
     @extend .creator__info-design-text;
     margin-bottom: 13px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 20px;
+    }
   }
   &-link {
     display: inline-block;
     width: 192px;
     height: 36px;
+
+    @media screen and (min-width: $desktop) {
+      width: 240px;
+      height: 45px;
+    }
   }
   &-link:hover + &-h2 {
     color: $orangen;
+  }
+
+  &-img {
+    width: 100%;
   }
 }
 
@@ -210,4 +387,11 @@
   text-align: center;
   display: block;
   opacity: 0.7;
+
+  margin-top: 33px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+    margin-top: 48px;
+  }
 }
