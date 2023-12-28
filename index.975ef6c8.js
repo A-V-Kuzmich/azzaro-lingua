@@ -580,11 +580,11 @@ var _slider = require("./js/slider");
 
 },{"./js/open-modal":"euVL5","./js/btn-form":"8PnBi","./js/slider":"aMYz0"}],"euVL5":[function(require,module,exports) {
 var _refs = require("./refs");
-const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg } = (0, _refs.refs);
+const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg, langBox } = (0, _refs.refs);
 (()=>{
     hamburger.addEventListener("click", toggleModalMobile);
     mobileLangBox.addEventListener("click", toggleModalLang);
-    mobileLangList.addEventListener("click", ModalLangChoose);
+    langBox.addEventListener("click", toggleBoxLang);
 })();
 function toggleModalMobile() {
     hamburger.classList.toggle("burger-active");
@@ -596,14 +596,8 @@ function toggleModalLang() {
     mobileLangSvg.classList.toggle("header__mobile-lang-svg-active");
     mobileLangList.classList.toggle("visually-hidden");
 }
-function ModalLangChoose(e) {
-    var clickedLi = e.target.closest("li");
-    if (clickedLi) {
-        var spanContent = clickedLi.querySelector(".header__mobile-lang-name").textContent;
-        var imgSrc = clickedLi.querySelector(".header__mobile-lang-flag");
-        console.log("Span Content:", spanContent);
-        console.log("Image Src:", imgSrc.currentSrc);
-    }
+function toggleBoxLang() {
+    langBox.classList.toggle("header__lang-active");
 }
 
 },{"./refs":"2WoF2"}],"2WoF2":[function(require,module,exports) {
@@ -617,13 +611,14 @@ const refs = {
     btnOpen: document.querySelector("#btn-form-open"),
     btnClose: document.querySelector("#btn-form-close"),
     modalForm: document.querySelector("#modal-form"),
-    carouselRow: document.getElementsByClassName(".customers__list"),
-    carouselSlides: document.getElementsByClassName(".customers__item"),
+    carouselRow: document.querySelector(".customers__list"),
+    carouselSlides: document.getElementsByClassName("customers__item"),
     btnPrev: document.querySelector("#btn-prev"),
     nextBtn: document.querySelector("#btn-next"),
     mobileLangBox: document.querySelector("#mobile-lang-box"),
     mobileLangList: document.querySelector("#mobile-lang-list"),
-    mobileLangSvg: document.querySelector(".header__mobile-lang-svg")
+    mobileLangSvg: document.querySelector(".header__mobile-lang-svg"),
+    langBox: document.querySelector("#langBox")
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -673,23 +668,23 @@ const { btnOpen, body, modalForm, btnClose } = (0, _refs.refs);
 var _refs = require("./refs");
 const { btnPrev, nextBtn, carouselSlides, carouselRow } = (0, _refs.refs);
 (()=>{
-    let index = 1;
+    let index = 0;
     width = carouselSlides[0].clientWidth;
     carouselRow.style.transform = "translateX(" + -width * index + "px)";
     nextBtn.addEventListener("click", nextSlide);
     function nextSlide() {
-        if (index >= carouselSlides.length - 1) return;
+        if (index >= carouselSlides.length - 4) return;
         carouselRow.style.transition = "transform 0.4s ease-out";
         index++;
         carouselRow.style.transform = "translateX(" + -width * index + "px)";
     }
-// hamburger.addEventListener('click', toggleModalMobile);
-// function toggleModalMobile() {
-//   hamburger.classList.toggle('burger-active');
-//   body.classList.toggle('no-scroll');
-//   modalNav.classList.toggle('backdrop');
-//   modalNav.classList.toggle('visually-hidden');
-// }
+    btnPrev.addEventListener("click", prevSlide);
+    function prevSlide() {
+        if (index < 0) return;
+        carouselRow.style.transition = "transform 0.4s ease-out";
+        index--;
+        carouselRow.style.transform = "translateX(" + -width * index + "px)";
+    }
 })();
 
 },{"./refs":"2WoF2"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire4254")
