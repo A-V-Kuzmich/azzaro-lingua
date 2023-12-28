@@ -669,7 +669,7 @@ var _refs = require("./refs");
 const { btnPrev, nextBtn, carouselSlides, carouselRow } = (0, _refs.refs);
 (()=>{
     let index = 0;
-    width = carouselSlides[0].clientWidth;
+    let width = carouselSlides[0].clientWidth;
     carouselRow.style.transform = "translateX(" + -width * index + "px)";
     nextBtn.addEventListener("click", nextSlide);
     function nextSlide() {
