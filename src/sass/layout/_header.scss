@@ -59,6 +59,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    transition: color $animation-duration $timing-function;
 
     &:hover,
     :focus {
