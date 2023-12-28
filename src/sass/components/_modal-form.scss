@@ -147,6 +147,12 @@
       border: 1px solid $black;
       box-shadow: 1px 1px 0px 0px #262c20;
     }
+    &::placeholder {
+      opacity: 0;
+    }
+    &:focus::placeholder {
+      opacity: 1;
+    }
   }
 }
 
@@ -246,6 +252,9 @@
     background: $background;
     box-shadow: 1.751px 1.751px 0px 0px #262c20;
     margin: 0 10px;
+    &::placeholder {
+      font-size: 14px;
+    }
   }
   &-text {
     color: #262c20;

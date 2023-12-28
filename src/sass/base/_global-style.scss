@@ -13,7 +13,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 %scroll-config {
-  background-image: linear-gradient(#9ed82187, #262c2072, #9ed82187);
+  // background-image: linear-gradient(#9ed82187, #262c2072, #9ed82187);
+  background-image: linear-gradient(#9ed82187, $orangen, #262c2072);
   border-radius: 5px;
 }
 %scroll-size {
