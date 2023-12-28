@@ -1,11 +1,11 @@
-import { refs } from "./refs";
+import { refs } from './refs';
 
-const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg } = refs;
+const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg, langBox } = refs;
 
 (() => {
   hamburger.addEventListener('click', toggleModalMobile);
   mobileLangBox.addEventListener('click', toggleModalLang);
-  mobileLangList.addEventListener('click', ModalLangChoose);
+  langBox.addEventListener('click', toggleBoxLang);
 })();
 
 function toggleModalMobile() {
@@ -18,13 +18,6 @@ function toggleModalLang() {
   mobileLangSvg.classList.toggle('header__mobile-lang-svg-active');
   mobileLangList.classList.toggle('visually-hidden');
 }
-function ModalLangChoose(e) {
-var clickedLi = e.target.closest('li'); 
-  if (clickedLi) {
-    var spanContent = clickedLi.querySelector('.header__mobile-lang-name').textContent;
-    var imgSrc = clickedLi.querySelector('.header__mobile-lang-flag');
-    
-    console.log('Span Content:', spanContent);
-    console.log('Image Src:', imgSrc.currentSrc);
-  }
+function toggleBoxLang() {
+  langBox.classList.toggle('header__lang-active');
 }

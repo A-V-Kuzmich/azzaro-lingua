@@ -209,7 +209,7 @@
     width: 20px;
     height: 20px;
     margin-left: -1px;
-    fill: $background;
+    fill: $light;
     transition: fill $animation-duration $timing-function;
   }
   &:checked + &-container-svg {

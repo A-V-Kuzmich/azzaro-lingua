@@ -154,16 +154,44 @@
 
 .header__lang {
   display: none;
+
   @media screen and (min-width: $desktop) {
     display: block;
   }
 
   position: relative;
+  overflow: hidden;
+
+  &-active {
+    overflow: visible;
+
+    .header__lang-container {
+      background-color: $light;
+      border-width: 0 4px 0 4px;
+      border-style: solid;
+      border-color: $black;
+      border-radius: 8px 8px 0px 0px;
+      box-shadow: 2px 2px 0px 0px #262c20;
+    }
+    .header__lang-svg {
+      fill: $orangen;
+      transform: rotate(180deg);
+    }
+    .header__lang-list {
+      transform: translate(0, 0);
+      z-index: 3;
+    }
+  }
 
   &-container {
     display: flex;
     align-items: center;
     height: 60px;
+    width: 90px;
+    padding-left: 10px;
+    position: relative;
+    z-index: 3;
+    background-color: $main-green;
 
     &:hover > .header__lang-svg {
       fill: $orangen;
@@ -171,7 +199,9 @@
   }
   &-svg {
     width: 24px;
+    height: 24px;
     transition: fill $animation-duration $timing-function;
+    transition: transform $animation-duration $timing-function;
   }
   &-flag {
     width: 36px;
@@ -179,20 +209,28 @@
     margin-right: 8px;
   }
   &-list {
+    width: 90px;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
+    background-color: $light;
+    top: 50px;
+    transition: transform $animation-duration $timing-function;
+    transform: translate(0, -60%);
+
     border-width: 0 4px 4px 4px;
     border-style: solid;
     border-color: $black;
     border-radius: 0px 0px 8px 8px;
+    box-shadow: 2px 2px 0px 0px #262c20;
   }
   &-item {
-    padding: 10px 12px;
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-    &:first-child {
-      padding-top: 0;
+    padding: 10px;
+    transition: background-color $animation-duration $timing-function;
+    &:hover {
+      background-color: $main-green;
+      &:last-child {
+        border-radius: 0px 0px 4px 4px;
+      }
     }
   }
 }

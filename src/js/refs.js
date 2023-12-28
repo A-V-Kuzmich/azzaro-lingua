@@ -12,4 +12,5 @@ export const refs = {
   mobileLangBox: document.querySelector('#mobile-lang-box'),
   mobileLangList: document.querySelector('#mobile-lang-list'),
   mobileLangSvg: document.querySelector('.header__mobile-lang-svg'),
+  langBox: document.querySelector('#langBox'),
 };
