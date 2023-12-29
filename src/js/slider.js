@@ -2,6 +2,9 @@ import { refs } from './refs';
 const { btnPrev, nextBtn, carouselSlides, carouselRow } = refs;
 
 (() => {
+  if ('/index.html' !== window.location.pathname) {
+    return;
+  }
   let index = 0;
 
   let width = carouselSlides[0].clientWidth;

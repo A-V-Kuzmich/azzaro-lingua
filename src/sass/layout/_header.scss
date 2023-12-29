@@ -23,7 +23,6 @@
   }
 
   &-list {
-    isolation: isolate;
     display: flex;
   }
   &-item {
@@ -36,6 +35,12 @@
       & > a {
         color: $white;
         position: relative;
+        mix-blend-mode: difference;
+        &:hover,
+        :focus {
+          color: $white;
+          mix-blend-mode: difference;
+        }
       }
 
       &:before {
