@@ -3,10 +3,6 @@ import { refs } from './refs';
 const { btnOpen, body, modalForm, btnClose } = refs;
 
 (() => {
-  if ('/index.html' !== window.location.pathname) {
-    return;
-  }
-
   btnOpen.addEventListener('click', toggleModalForm);
   btnClose.addEventListener('click', toggleModalForm);
 
