@@ -61,6 +61,7 @@ ul, ol {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -758,7 +759,6 @@ body::-webkit-scrollbar {
 }
 
 .header__lang-active .header__lang-svg {
-  fill: #ffc01d;
   transform: rotate(180deg);
 }
 

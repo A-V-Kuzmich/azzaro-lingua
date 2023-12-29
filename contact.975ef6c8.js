@@ -574,12 +574,22 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
+var _pageChanger = require("./js/pageChanger");
 var _openModal = require("./js/open-modal");
 var _btnForm = require("./js/btn-form");
 var _slider = require("./js/slider");
-var _pageChanger = require("./js/pageChanger");
 
-},{"./js/open-modal":"euVL5","./js/btn-form":"8PnBi","./js/slider":"aMYz0","./js/pageChanger":"3jRkT"}],"euVL5":[function(require,module,exports) {
+},{"./js/pageChanger":"3jRkT","./js/open-modal":"euVL5","./js/btn-form":"8PnBi","./js/slider":"aMYz0"}],"3jRkT":[function(require,module,exports) {
+let navLinks = document.querySelectorAll(".header__mobile-nav-link");
+function handlePageChange() {
+    navLinks.forEach(function(link) {
+        if (link.getAttribute("href") === window.location.pathname) link.parentNode.classList.add("header__mobile-nav-item-active");
+    });
+}
+window.addEventListener("popstate", handlePageChange);
+handlePageChange();
+
+},{}],"euVL5":[function(require,module,exports) {
 var _refs = require("./refs");
 const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg, langBox } = (0, _refs.refs);
 (()=>{
@@ -656,7 +666,6 @@ exports.export = function(dest, destName, get) {
 var _refs = require("./refs");
 const { btnOpen, body, modalForm, btnClose } = (0, _refs.refs);
 (()=>{
-    if ("/index.html" !== window.location.pathname) return;
     btnOpen.addEventListener("click", toggleModalForm);
     btnClose.addEventListener("click", toggleModalForm);
     function toggleModalForm() {
@@ -670,7 +679,6 @@ const { btnOpen, body, modalForm, btnClose } = (0, _refs.refs);
 var _refs = require("./refs");
 const { btnPrev, nextBtn, carouselSlides, carouselRow } = (0, _refs.refs);
 (()=>{
-    if ("/index.html" !== window.location.pathname) return;
     let index = 0;
     let width = carouselSlides[0].clientWidth;
     carouselRow.style.transform = "translateX(" + -width * index + "px)";
@@ -690,16 +698,6 @@ const { btnPrev, nextBtn, carouselSlides, carouselRow } = (0, _refs.refs);
     }
 })();
 
-},{"./refs":"2WoF2"}],"3jRkT":[function(require,module,exports) {
-let navLinks = document.querySelectorAll(".header__mobile-nav-link");
-function handlePageChange() {
-    navLinks.forEach(function(link) {
-        if (link.getAttribute("href") === window.location.pathname) link.parentNode.classList.add("header__mobile-nav-item-active");
-    });
-}
-window.addEventListener("popstate", handlePageChange);
-handlePageChange();
-
-},{}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire4254")
+},{"./refs":"2WoF2"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire4254")
 
 //# sourceMappingURL=contact.975ef6c8.js.map
