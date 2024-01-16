@@ -13,4 +13,6 @@ export const refs = {
   mobileLangList: document.querySelector('#mobile-lang-list'),
   mobileLangSvg: document.querySelector('.header__mobile-lang-svg'),
   langBox: document.querySelector('#langBox'),
+  navLinksMobile: document.querySelectorAll('.header__mobile-nav-link'),
+  navLinks: document.querySelectorAll('.header__nav-link'),
 };

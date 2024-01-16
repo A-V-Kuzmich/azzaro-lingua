@@ -32,28 +32,8 @@
       margin-right: 20px;
     }
     &-active {
-      & > a {
-        color: $white;
-        position: relative;
-        mix-blend-mode: difference;
-        &:hover,
-        :focus {
-          color: $white;
-          mix-blend-mode: difference;
-        }
-      }
-
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 48px;
-        height: 48px;
-        background-color: $black;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      .header__nav-link-text-container {
+        opacity: 1;
       }
     }
   }
@@ -64,11 +44,37 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    transition: color $animation-duration $timing-function;
+    position: relative;
 
-    &:hover,
-    :focus {
-      color: $orangen;
+    &:hover > &-text-container {
+      opacity: 1;
+    }
+
+    &-text {
+      &-container {
+        opacity: 0;
+        transition: opacity $animation-duration $timing-function;
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        background-color: $black;
+        border-radius: 50%;
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        overflow: hidden;
+      }
+      &:last-child {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
@@ -204,8 +210,8 @@
   &-svg {
     width: 24px;
     height: 24px;
-    transition: fill $animation-duration $timing-function;
     transition: transform $animation-duration $timing-function;
+    transition: fill $animation-duration $timing-function;
   }
   &-flag {
     width: 36px;
