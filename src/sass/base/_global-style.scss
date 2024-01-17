@@ -11,6 +11,73 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   @extend %scroll-config;
 }
+h1 {
+  color: $black;
+  text-shadow: 2px 2px 0px #f2f6e6;
+  font-family: $libre;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop) {
+    text-shadow: 4px 4px 0px #f2f6e6;
+    font-size: 136px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+}
+h2 {
+  font-family: $libre;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 60px;
+    line-height: 1.33;
+  }
+}
+h3 {
+  font-family: $libre;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 60px;
+    line-height: 1.33;
+  }
+}
+h4 {
+  font-family: $libre;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.78;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    line-height: 1.63;
+  }
+}
+h5 {
+  font-family: $libre;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 1.67;
+  }
+}
 
 %scroll-config {
   // background-image: linear-gradient(#9ed82187, #262c2072, #9ed82187);
@@ -34,7 +101,6 @@ body::-webkit-scrollbar-thumb {
 
 %devider-after-h2 {
   color: $black;
-  font-family: $libre;
 
   &::after {
     content: url('../images/elements/devider.svg');
@@ -54,9 +120,7 @@ body::-webkit-scrollbar-thumb {
 }
 %form-desctop {
   @media screen and (min-width: $desktop) {
-    .modal-form__body-h2 {
-      font-size: 24px;
-      line-height: 1.67;
+    .modal-form__body-h5 {
       margin-bottom: 20px;
       &::after {
         margin-top: 20px;
