@@ -7,17 +7,11 @@
   border-radius: 14px;
   border: 2px solid $error;
   box-shadow: $box-shadow-error;
-  &::after {
-    content: '';
-  }
 }
 %succes {
   border-radius: 14px;
   border: 2px solid $succes;
   box-shadow: $box-shadow-succes;
-  &::after {
-    content: '';
-  }
 }
 %hover-focus {
   text-decoration: none;
