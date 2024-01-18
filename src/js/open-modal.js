@@ -27,13 +27,12 @@ function toggleBoxLang() {
 }
 
 function clickOutside() {
-  const backdrop = document.querySelector('.backdrop');
-  backdrop.addEventListener('click', fn);
-
-  function fn(e) {
+  const fn = e => {
     if (e.currentTarget === e.target) {
       backdrop.removeEventListener('click', fn);
       toggleModalMobile();
     }
-  }
+  };
+  const backdrop = document.querySelector('.backdrop');
+  backdrop.addEventListener('click', fn);
 }
