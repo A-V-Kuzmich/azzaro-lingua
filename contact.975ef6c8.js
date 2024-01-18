@@ -580,36 +580,24 @@ var _btnForm = require("./js/btn-form");
 var _slider = require("./js/slider");
 
 },{"./js/pageChanger":"3jRkT","./js/open-modal":"euVL5","./js/btn-form":"8PnBi","./js/slider":"aMYz0"}],"3jRkT":[function(require,module,exports) {
-let navLinks = document.querySelectorAll(".header__mobile-nav-link");
-function handlePageChange() {
-    navLinks.forEach(function(link) {
-        if (link.getAttribute("href") === window.location.pathname) link.parentNode.classList.add("header__mobile-nav-item-active");
+var _refs = require("./refs");
+const { navLinksMobile, navLinks } = (0, _refs.refs);
+function setActiveClass(links, currentPath) {
+    links.forEach((link)=>{
+        const parent = link.parentNode;
+        const linkPath = link.getAttribute("href");
+        const isActive = linkPath === currentPath;
+        parent.classList.toggle("header__mobile-nav-item-active", isActive);
+        parent.classList.toggle("header__nav-item-active", isActive);
     });
+}
+function handlePageChange() {
+    const currentPath = window.location.pathname;
+    setActiveClass(navLinksMobile, currentPath);
+    setActiveClass(navLinks, currentPath);
 }
 window.addEventListener("popstate", handlePageChange);
 handlePageChange();
-
-},{}],"euVL5":[function(require,module,exports) {
-var _refs = require("./refs");
-const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg, langBox } = (0, _refs.refs);
-(()=>{
-    hamburger.addEventListener("click", toggleModalMobile);
-    mobileLangBox.addEventListener("click", toggleModalLang);
-    langBox.addEventListener("click", toggleBoxLang);
-})();
-function toggleModalMobile() {
-    hamburger.classList.toggle("burger-active");
-    body.classList.toggle("no-scroll");
-    modalNav.classList.toggle("backdrop");
-    modalNav.classList.toggle("visually-hidden");
-}
-function toggleModalLang() {
-    mobileLangSvg.classList.toggle("header__mobile-lang-svg-active");
-    mobileLangList.classList.toggle("visually-hidden");
-}
-function toggleBoxLang() {
-    langBox.classList.toggle("header__lang-active");
-}
 
 },{"./refs":"2WoF2"}],"2WoF2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -629,7 +617,9 @@ const refs = {
     mobileLangBox: document.querySelector("#mobile-lang-box"),
     mobileLangList: document.querySelector("#mobile-lang-list"),
     mobileLangSvg: document.querySelector(".header__mobile-lang-svg"),
-    langBox: document.querySelector("#langBox")
+    langBox: document.querySelector("#langBox"),
+    navLinksMobile: document.querySelectorAll(".header__mobile-nav-link"),
+    navLinks: document.querySelectorAll(".header__nav-link")
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -662,7 +652,29 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"8PnBi":[function(require,module,exports) {
+},{}],"euVL5":[function(require,module,exports) {
+var _refs = require("./refs");
+const { hamburger, body, modalNav, mobileLangBox, mobileLangList, mobileLangSvg, langBox } = (0, _refs.refs);
+(()=>{
+    hamburger.addEventListener("click", toggleModalMobile);
+    mobileLangBox.addEventListener("click", toggleModalLang);
+    langBox.addEventListener("click", toggleBoxLang);
+})();
+function toggleModalMobile() {
+    hamburger.classList.toggle("burger-active");
+    body.classList.toggle("no-scroll");
+    modalNav.classList.toggle("backdrop");
+    modalNav.classList.toggle("visually-hidden");
+}
+function toggleModalLang() {
+    mobileLangSvg.classList.toggle("header__mobile-lang-svg-active");
+    mobileLangList.classList.toggle("visually-hidden");
+}
+function toggleBoxLang() {
+    langBox.classList.toggle("header__lang-active");
+}
+
+},{"./refs":"2WoF2"}],"8PnBi":[function(require,module,exports) {
 var _refs = require("./refs");
 const { btnOpen, body, modalForm, btnClose } = (0, _refs.refs);
 (()=>{
