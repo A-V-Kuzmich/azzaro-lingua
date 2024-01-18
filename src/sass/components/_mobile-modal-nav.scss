@@ -122,6 +122,12 @@
     transition: transform $animation-duration $timing-function;
     transition: fill $animation-duration $timing-function;
   }
+  &-svg-choose {
+    width: 24px;
+    height: 24px;
+    fill: transparent;
+    transition: all $animation-duration $timing-function;
+  }
 
   &-list {
     position: relative;
@@ -132,13 +138,26 @@
   &-item {
     width: 300px;
     padding: 5px 40px;
-    background-color: $light;
-    &:active > .header__mobile-lang-name {
-      color: $orangen;
+    display: flex;
+    justify-content: space-between;
+    background-color: $main-green;
+
+    &:active {
+      .header__mobile-lang-name {
+        color: $orangen;
+      }
+      .header__mobile-lang-svg-choose {
+        fill: $orangen;
+      }
     }
   }
-  &-item:hover > &-name {
-    color: $accent-color;
+  &-item:hover {
+    .header__mobile-lang-name {
+      color: $white;
+    }
+    .header__mobile-lang-svg-choose {
+      fill: $white;
+    }
   }
 }
 

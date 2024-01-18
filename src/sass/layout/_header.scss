@@ -236,11 +236,23 @@
   &-item {
     padding: 10px;
     transition: background-color $animation-duration $timing-function;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &:hover {
       background-color: $main-green;
       &:last-child {
         border-radius: 0px 0px 4px 4px;
       }
+      .header__lang-item-svg {
+        fill: $black;
+      }
     }
+  }
+  &-item-svg {
+    width: 16px;
+    height: 16px;
+    fill: transparent;
+    transition: fill $animation-duration $timing-function;
   }
 }
