@@ -18,18 +18,10 @@
   box-shadow: 1.751px 1.751px #ffc01d;
 }
 
-.modal-form__form-input:invalid:after, .modal-form__form-field-spam-input:invalid:after {
-  content: "";
-}
-
 .modal-form__form-input:valid, .modal-form__form-field-spam-input:valid {
   border: 2px solid #9ed821;
   border-radius: 14px;
   box-shadow: 1.751px 1.751px #9ed821;
-}
-
-.modal-form__form-input:valid:after, .modal-form__form-field-spam-input:valid:after {
-  content: "";
 }
 
 .modal-form__form-input:hover, .modal-form__form-input :focus, .modal-form__form-field-spam-input:hover, .modal-form__form-field-spam-input :focus {
